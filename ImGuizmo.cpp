@@ -674,7 +674,8 @@ namespace ImGuizmo
       ImGuiIO& io = ImGui::GetIO();
 
       const ImU32 flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoBringToFrontOnFocus;
-      ImGui::SetNextWindowSize(io.DisplaySize);
+	  ImGui::SetNextWindowPos(ImVec2(0,0));
+	  ImGui::SetNextWindowSize(io.DisplaySize);
 
 	  ImGui::PushStyleColor(ImGuiCol_WindowBg, 0);
       ImGui::Begin("gizmo", NULL, flags);
